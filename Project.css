@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+    color: #fff;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+*::selection{
+    background-color: #fff;
+    color:#75d729;
+}
+body::-webkit-scrollbar{
+    display: block;
+    width: 3.5px;
+    background-color: #75d729;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #fff;
+}
+#crsr{
+    height: 20px;
+    width: 20px;
+    background-color: #7fd42bbd;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transition: all ease 0.1s;
+}
+#crsr-blr{
+    height: 250px;
+    width: 250px;
+    background-color: rgba(119, 187, 59, 0.285);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(70px);
+    z-index: 9;
+    transition: all ease 0.5s;
+}
+#navbar{
+    height: 130px;
+    width: 100%;
+    display: flex;
+    padding: 0 120px;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    gap: 47px;
+    z-index: 999;
+}
+#navbar h4{
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.15vw;
+    transition: all ease 0.2s;
+}
+#navbar img{
+    height: 4.5vw
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color:rgb(0, 0, 0,0.4);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1{
+    font-size: 7vw;
+    font-weight: 800;
+    position: relative;
+}
+#page1 h1::before{
+    content: 'EAT. DRINK. PLAY.';
+    position: absolute;
+    color: black;
+    left: -4px;
+    top: -4px;
+    -webkit-text-stroke: 1px #7cd43387;
+    z-index: -1;
+}
+#page1 h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 p {
+    font-size: 1.1vw;
+    /* font-weight: ; */
+    width: 40%;
+}
+#page1 #arrow{
+    height:220px;
+    width: 220px;
+    background-color: transparent;
+    border: 2px solid #75d729;
+    position: absolute;
+    display: flex;
+    left: -3%;
+    bottom:-1%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+#arrow i{
+    font-size: 40px;
+    font-weight:200;
+    color: #ffffffaa;
+    
+}
+#page1 #arrow:hover{
+    scale: 0.4;
+    background-color:#75d729 ;
+}
+
+#page2{
+    height: 155vh;
+    width: 100%;
+}
+#scroller{
+    /* background-color: blue; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller-in h4{
+    font-size: 120px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    margin-right: 30px;
+    transition: all linear 0.3s;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+#scroller h4:hover{
+    color: #76c539;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    } 
+}
+#About{
+    height: 35vh;
+    width: 100%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    padding: 235px 80px;
+    z-index: 10;
+    position: relative;
+    justify-content: space-around;
+}
+#About img{
+    height:220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+
+}
+#AboutUs{
+    width: 50%;
+    text-align: center;
+}
+#AboutUs h2{
+    font-size:50px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+#AboutUs p{
+    font-size:20px;
+    line-height: 30px;
+}
+#cards img{
+    height : 32vh;
+    width : 10%;
+    object-fit: cover;
+    position: absolute;
+    right: 192vh;
+    top: 185vh;
+    /* display: block;
+    margin: -10% auto; */
+    
+    /* justify-content: ; */
+}
+#cards{
+    height: 60vh;
+    width : 100%;
+    /* background-color: rgb(109, 43, 109); */
+    /* padding: 30px 40px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 100px;
+    
+    z-index: 10;
+    /* object-fit: cover; */
+}
+
+.card{
+    height: 44vh;
+    width : 36vh;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    z-index: 9;
+}
+#card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    /* position: absolute; */
+}
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #9ddc4a;
+    padding: 80px ;
+    border-radius: 10px;
+    padding-left: 20px;
+    opacity: 0;
+    transition: all ease 0.7s;
+}
+.overlay h2{
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+.overlay p{
+    color: #000;
+    white-space: nowrap;
+    margin-bottom: 3px;
+}
+.card:hover .overlay {
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(1,-1,0,18deg);
+}
+
+#page3{
+    height: 125vh;
+    width: 100%;
+}
+#sign-up{
+    height : 30vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#146f27, #97c31ff9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#sign-up h3{
+    width: 50%;
+    font-size: 1.5em;
+    color:black;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 900;
+}
+#sign-up img{
+    height: 30vh;
+    width: 12%;
+    object-fit: cover;
+
+}
+#food-drink{
+    height: 80vh;
+    width: 100%;
+    /* background-color:blue; */
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-right: 8%;
+}
+#food-drink img{
+    height: 60vh;
+    width: 90vh;
+    border-radius: 15px;
+    position: absolute;
+}
+#imgFood{
+    padding-right:50%;
+    
+}
+#imgFood img{
+    animation:  slideAnimation 0.5s ease-in-out;
+}
+@keyframes slideAnimation {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+#FoodDrink{
+    height: 50vh;
+    width: 70vh;
+    padding-top: 5%;
+    /* padding-right: ; */
+}
+#FoodDrink h2{
+    font-size:50px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+#FoodDrink p{
+    font-size:17px;
+    line-height: 30px;
+    font-weight: 300;
+}
+#SpotImg img{
+    height : 20vh;
+    width : 10%;
+    object-fit: cover;
+    position: absolute;
+    right : 83%;
+    top: 350vh;
+    
+}
+#sideArrow{
+    left : 45.6%;
+    top : 325vh;
+    position: absolute;
+    z-index: 10;
+}
+#sideArrow i{
+    font-size: 40px;
+    font-weight: 100;
+    color: #859c5d;
+}
+#nextButton{
+    background-color:rgba(80, 80, 80, 0.301);
+    border-radius: 45%;
+    
+}
+#button{
+    margin-top: 30px;
+}
+#button #coffee{
+    height: 35px;
+    width: 140px;
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    border-radius: 15px;
+    border: 2px solid #9ddc4a;
+    cursor: pointer;
+}
+#page4{
+    height:100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page4>p{
+    font-size: 25px;
+    font-weight: bold;
+    width: 60%;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#page4 img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+#page4 #colon1{
+    top: 411vh;
+    left: 16.4%;
+}
+#page4 #colon2{
+    top: 440vh;
+    right: 20%;
+}
+#page5{
+    height:45vh;
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap : 50px;
+}
+.elem{
+    height:22vh;
+    width: 50vh; 
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+.elem h2{
+    height: 100%;
+    width: 100%;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #000;
+    transition: all ease 0.5s;
+    background-color:#97c31ff9;
+    position: absolute;
+    z-index: 10; 
+}
+.elem img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.4s;
+    scale: 1.2;
+}
+.elem:hover h2{
+    background-color: transparent;
+    color: #fff;
+} 
+.elem:hover img{
+    scale: 1;
+} 
+#page5 h1{
+    /* height:15vh; */
+    font-size: 9.8vh;
+    font-weight: 800;
+    position: absolute;
+    /* top : 2%; */
+    top : 83.9%;
+    /* font-family: ""; */
+    -webkit-text-stroke: 0.8px #fff;
+    color: transparent;
+}
+#footer{
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#1AA238, #97c31ff9);
+    overflow: hidden;
+    display: flex;
+    align-items:center;
+}
+#footer #WhiteDot{
+    height: 100%;
+    width: 27%;
+    overflow: hidden;
+    /* z-index: -1; */
+}
+#footer #title{
+    height: 16vh;
+    width: 16vh;
+    bottom: 23vh;
+    left: 9%;
+    position: absolute;
+}
+#icon1{
+    left: 9%;
+    font-size: 28px;
+    position: absolute;
+    font-weight: normal;
+    color: #000;
+    bottom: 16vh;
+}
+#icon2{
+    left: 11.5%;
+    font-size: 28px;
+    position: absolute;
+    font-weight: normal;
+    color: #000;
+    bottom: 16vh;
+}
+#icon3 {
+    left: 14%;
+    font-size: 28px;
+    position: absolute;
+    font-weight: normal;
+    color: #000;
+    bottom: 16vh;
+}
+i{
+    cursor: pointer;
+}
+#ContactUs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 120px;
+    color: #000;
+}
+#coloum1 h2{
+    font-size: 22px;
+    font-weight: 900;
+    color: #000;
+    transition: all ease 0.2s;
+}
+#coloum2 h2{
+    font-size: 22px;
+    font-weight: 900;
+    color: #000;
+}
+#coloum3 p{
+    text-transform: uppercase;
+    color: #000;
+    font-size: 14px;
+}
+#coloum3 h3{
+    color: #000;
+    font-size:16px;
+    font-weight: 800;
+}
+#lastline{
+    position: absolute;
+    left : 9%;
+    bottom: 0.7%;
+}
+#lastline p{
+    color: #000;
+    font-size: 13px;
+}
