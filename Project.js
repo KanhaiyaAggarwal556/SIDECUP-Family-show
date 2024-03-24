@@ -29,7 +29,7 @@ gsap.to("#main",{
     }
 });
 var currentImageIndex = 0;
-var images = ['https://images.squarespace-cdn.com/content/v1/5f083237655f896f7006165b/1594392725886-3K0GCRPSCC39D3WLR5FE/199-DS7_2902.jpg?format=2500w', 'https://static.toiimg.com/thumb/msid-68049806,imgsize-223084,width-400,resizemode-4/68049806.jpg', 'https://cdn.shopify.com/s/files/1/0022/8445/3977/files/coffee-cup_1024x1024.jpg?v=1673473132']; // Add more image URLs as needed
+var images = ['eat1.jpg', 'eat2.webp', 'eat3.webp']; // Add more image URLs as needed
 var currentImage = document.getElementById('currentImage');
 
 function nextImage() {

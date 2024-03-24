@@ -246,14 +246,14 @@ video{
     z-index: 9;
 }
 #card1{
-    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-image: url(about1.avif);
     /* position: absolute; */
 }
 #card2{
-    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-image: url(about2.avif);
 }
 #card3{
-    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-image: url(about3.jpg);
 }
 .overlay{
     height: 100%;
